@@ -32,7 +32,10 @@ export default function SignupForm() {
       }),
     };
     try {
-      let data = await fetch("http://localhost:8080/user/signup", options);
+      let data = await fetch(
+        `${import.meta.env.VITE_API_URL}/user/signup`,
+        options
+      );
       let origRes = await data.json();
       if (!origRes.success) {
         setSignup(true);

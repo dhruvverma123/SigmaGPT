@@ -30,7 +30,10 @@ export default function LoginForm() {
       }),
     };
     try {
-      let data = await fetch("http://localhost:8080/user/login", options);
+      let data = await fetch(
+        `${import.meta.env.VITE_API_URL}/user/login`,
+        options
+      );
       let origRes = await data.json();
       if (!origRes.success) {
         setLogin(true);

@@ -1,0 +1,252 @@
+.chatWindow {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid white; */
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+  height: 40px;
+  align-items: center;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.1);
+}
+
+.SigmaGPT {
+  display: flex;
+  margin-left: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.SigmaGPT:hover {
+  background-color: rgba(180, 180, 180, 0.3);
+  border-radius: 5px;
+}
+
+.userIcon {
+  margin-right: 25px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #333ecc;
+  border-radius: 50%;
+}
+
+/* inputText */
+.chatInput {
+  display: flex;
+  margin-bottom: 5px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.userInput {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 900px;
+}
+
+.userInput input {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  border-radius: 30px;
+  padding-left: 35px;
+  border: none;
+  background-color: #313131;
+  caret-color: #ececec;
+  font-size: 1rem;
+  transform: scaleX(0.98); /* thoda compress karega */
+  box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px, rgba(0, 0, 0, 0.05) 0 -12px 30px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px, rgba(0, 0, 0, 0.05) 0 12px 3px,
+    rgba(0, 0, 0, 0.05) 0 -3px 5px;
+}
+
+.userInput input::placeholder {
+  font-size: 1rem;
+  filter: brightness(1.5);
+}
+
+.userInput input:focus {
+  outline: none;
+}
+
+.userInput .send {
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+}
+
+.userInput .send:hover {
+  background-color: rgba(180, 180, 180, 0.3);
+}
+
+.chatInput p {
+  margin: 13px 0px 2px 0px;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+}
+
+.dropdown {
+  position: absolute;
+  top: 55px;
+  right: 5px;
+  font-size: 1.01rem;
+  background-color: #313131;
+  width: 200px;
+  text-align: start;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px rgba(180, 180, 180, 0.1);
+  z-index: 1000;
+}
+
+.dropdown p {
+  margin: 5px;
+  /* border: 1px solid white; */
+  text-align: start;
+  border-radius: 10px;
+  display: flex;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.dropdown p:hover {
+  background-color: #515151;
+}
+
+/* login form */
+.loginStyle {
+  position: absolute;
+  top: 20%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.244);
+}
+
+.loginStyle.show {
+  transition: all 11s ease-in-out;
+}
+
+.loginStyle h1 {
+  font-family: system-ui, sans-serif;
+}
+.css-1o7y2jg-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 10px;
+}
+
+.innerField {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.innerField .childInnerField {
+  margin: 1rem;
+}
+
+.btnStyle {
+  margin-top: 1rem;
+  padding-left: 11.5rem;
+}
+
+/* upgrade model */
+.upgrade {
+  position: absolute;
+  top: 60px;
+  right: 220px;
+  padding: 0px 5px;
+  background-color: #515151;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+}
+
+/* signupLogin */
+.signupLogin {
+  position: absolute;
+  right: 100px;
+}
+
+.hamDiv {
+  position: absolute;
+  top: 60px;
+  left: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1999;
+}
+
+.hamDiv:hover {
+  background-color: #515151;
+}
+
+.fa-bars {
+  font-size: 1.3rem;
+}
+
+.rightDiv {
+  position: absolute;
+  right: 1px;
+  background-color: transparent;
+  width: 70%;
+  height: 100vh;
+  z-index: 1998;
+}
+
+@media (max-width: 400px) {
+  .SigmaGPT {
+    font-size: 0.9rem;
+  }
+  .signupLogin {
+    right: 70px;
+  }
+}
+
+@media (max-width: 575px) {
+  .userInput {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hamDiv {
+    display: flex;
+  }
+}

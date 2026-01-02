@@ -1,0 +1,123 @@
+.sideBar {
+  background-color: #171717;
+  color: #b4b4b4;
+  height: 100vh;
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 299999;
+  left: 2px;
+}
+/*  */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #171717;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+/*  */
+
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  margin: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 25px;
+  width: 25px;
+  background-color: #b4b4b4;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+button:hover {
+  background-color: rgba(180, 180, 180, 0.05);
+}
+
+button i {
+  font-size: 1.1rem;
+}
+
+.history {
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.history li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  margin-bottom: 0.3rem;
+  font-size: 14px;
+  border: 10px solid transparent;
+  position: relative;
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: start;
+}
+
+.history li:hover {
+  background-color: rgba(180, 180, 180, 0.05);
+  border-radius: 10px;
+}
+
+.sign {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+  border-top: 1px solid rgba(180, 180, 180, 0.5);
+  /* border: 1px solid white; */
+}
+
+.sign p {
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.fa-trash {
+  opacity: 0;
+  right: 0;
+  position: absolute;
+}
+
+.history li:hover .fa-trash {
+  opacity: 1;
+}
+
+.fa-trash:hover {
+  color: #f87171;
+}
+
+.highlighted {
+  background-color: rgba(180, 180, 180, 0.05);
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .sideBar {
+    display: flex;
+  }
+}

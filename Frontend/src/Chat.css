@@ -1,0 +1,54 @@
+body::selection {
+  background-color: #2596be;
+}
+
+.chats {
+  /* border: 1px solid white; */
+  max-width: 50%;
+  width: 50%;
+  overflow-y: scroll;
+  font-family: sans-serif;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+
+.userDiv {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: flex-end;
+  max-width: 400px;
+  margin-left: 35%;
+}
+
+.userMessage {
+  background-color: #323232d9;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: sans-serif;
+  width: fit-content;
+}
+
+.gptDiv {
+  /* border: 2px solid white; */
+  text-align: left;
+}
+
+.hljs {
+  border-radius: 14px !important;
+}
+
+@media (max-width: 800px) {
+  .chats {
+    /* border: 1px solid white; */
+    max-width: 80%;
+    width: 80%;
+    overflow-y: scroll;
+    font-family: sans-serif;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}

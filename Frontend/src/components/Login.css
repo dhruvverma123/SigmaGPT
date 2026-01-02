@@ -1,0 +1,67 @@
+/* login form */
+.loginStyle {
+  position: absolute;
+  top: 20%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.244);
+  width: 23%;
+}
+
+.loginStyle.show {
+  transition: all 11s ease-in-out;
+}
+
+.loginStyle h1 {
+  font-family: system-ui, sans-serif;
+}
+.css-1o7y2jg-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 10px;
+}
+
+.innerField {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.innerField .childInnerField {
+  margin: 1rem;
+}
+
+.btnStyle {
+  margin-top: 1rem;
+  padding-left: 11.5rem;
+}
+
+@media (max-width: 1000px) {
+  .loginStyle {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginStyle {
+    width: 50%;
+  }
+  .btnStyle {
+    border: 1px solid white;
+  }
+}
+
+@media (max-width: 500px) {
+  .loginStyle {
+    width: 60%;
+  }
+}
+
+@media (max-width: 420px) {
+  .loginStyle {
+    width: 70%;
+  }
+}
+
+@media (max-width: 350px) {
+  .loginStyle {
+    width: 80%;
+  }
+}

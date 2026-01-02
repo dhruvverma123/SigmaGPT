@@ -14,7 +14,13 @@ const LocalStrategy = passportLocal.Strategy;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://sigmagpt-1-vvef.onrender.com", // frontend URL
+    methods: ["GET", "POST", "DELETE"],
+    credentials: true,
+  })
+);
 
 const store = MongoStore.create({
   mongoUrl: process.env.MONGO_ATLAS_URL,

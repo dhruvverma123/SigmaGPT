@@ -6,7 +6,7 @@ export function useLogout() {
 
   async function logout() {
     try {
-      let data = await fetch("http://localhost:8080/user/logout");
+      let data = await fetch(`${import.meta.env.VITE_API_URL}/user/logout`);
       let origRes = await data.json();
       if (!origRes.success) {
         setCurrentUser(currentUser);

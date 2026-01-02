@@ -6,7 +6,7 @@ export function Threadtitle() {
 
   async function getThreadTitle() {
     try {
-      let res = await fetch("http://localhost:8080/api/thread");
+      let res = await fetch(`${import.meta.env.VITE_API_URL}/api/thread`);
       let oriResp = await res.json();
 
       let filterdData = oriResp.thread.map((e) => ({

@@ -17,7 +17,7 @@ export function PreviousChat() {
     } else {
       try {
         let response = await fetch(
-          `http://localhost:8080/api/thread/${newThreadId}`
+          `${import.meta.env.VITE_API_URL}/api/thread/${newThreadId}`
         );
         let origRes = await response.json();
         setThreadId(newThreadId);

@@ -9,7 +9,7 @@ export function DeleteList() {
   async function deleteList(threadId) {
     try {
       let response = await fetch(
-        `http://localhost:8080/api/thread/${threadId}`,
+        `${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
         {
           method: "DELETE",
         }

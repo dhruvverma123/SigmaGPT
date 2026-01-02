@@ -243,6 +243,10 @@
   .userInput {
     width: 90%;
   }
+
+  .chatInput p {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 600px) {

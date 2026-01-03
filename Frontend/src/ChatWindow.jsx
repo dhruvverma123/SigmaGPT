@@ -11,6 +11,7 @@ import { useLogout } from "./Functions/Logout.js";
 import { useGetReply } from "./Functions/GetReply.js";
 import FlashMessage from "./FlashMessage.jsx";
 import SidebarBlock from "./SideBarBlock.jsx";
+import { GetNewChat } from "./Functions/getNewChat.js";
 
 export default function ChatWindow() {
   let {
@@ -31,6 +32,7 @@ export default function ChatWindow() {
   let logout = useLogout();
   let getReply = useGetReply();
   let [sidebar, setSideBar] = useState(false);
+  let getNewChat = GetNewChat();
 
   function showDropdown() {
     setDropDown(!dropDown);
@@ -41,7 +43,7 @@ export default function ChatWindow() {
       <FlashMessage />
       <div className="navbar">
         <div className="SigmaGPT">
-          SigmaGPT
+          <span onClick={getNewChat}>SigmaGPT</span>
           <span>
             <i className="fa-solid fa-angle-down"></i>
           </span>
@@ -57,7 +59,7 @@ export default function ChatWindow() {
                     setDropDown(false);
                   }}
                 >
-                  signIn
+                  signUp
                 </button>
               </div>
               <div>

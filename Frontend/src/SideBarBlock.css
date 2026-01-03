@@ -121,3 +121,9 @@ button i {
     display: flex;
   }
 }
+
+@media (max-width: 575px) {
+  .sign {
+    margin: 8px 10px 55px 10px;
+  }
+}

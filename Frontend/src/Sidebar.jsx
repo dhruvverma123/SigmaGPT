@@ -5,6 +5,7 @@ import { Threadtitle } from "./Functions/GetThreadTittle.js";
 import { GetNewChat } from "./Functions/getNewChat.js";
 import { PreviousChat } from "./Functions/PreviousChat.js";
 import { DeleteList } from "./Functions/DeleteList.js";
+import banner from "../src/assets/blacklogo.png";
 
 export default function Sidebar() {
   let { allTread, currThreadId, currentUser, showFlash, setDropDown } =
@@ -18,7 +19,7 @@ export default function Sidebar() {
     <section className="sidebar">
       <Threadtitle />
       <button onClick={getNewChat} style={{ fontSize: "1.01rem" }}>
-        <img src="src/assets/blacklogo.png" alt="gpt logo" className="logo" />
+        <img src={banner} alt="gpt logo" className="logo" />
         New chat
         <i className="fa-solid fa-pen-to-square"></i>
       </button>

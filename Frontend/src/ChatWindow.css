@@ -188,7 +188,7 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
-  height: 45px;
+  height: 5%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   cursor: pointer;
 }
@@ -252,5 +252,12 @@
 @media (max-width: 600px) {
   .hamDiv {
     display: flex;
+  }
+}
+
+@media (max-width: 470px) {
+  .upgrade {
+    top: 100px;
+    margin-left: 2%;
   }
 }

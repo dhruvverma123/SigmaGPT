@@ -5,7 +5,7 @@ import { Threadtitle } from "./Functions/GetThreadTittle.js";
 import { GetNewChat } from "./Functions/getNewChat.js";
 import { PreviousChat } from "./Functions/PreviousChat.js";
 import { DeleteList } from "./Functions/DeleteList.js";
-import banner from "../src/assets/blacklogo.png";
+import banner from "../src/assets/cropped_circle_image.png";
 
 export default function Sidebar() {
   let { allTread, currThreadId, currentUser, showFlash, setDropDown } =

@@ -41,11 +41,13 @@ export function useGetReply() {
       }),
     };
     try {
-      let response = await fetch(`http://localhost:8080/api/chat`, options);
+      let response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/chat`,
+        options,
+      );
       let originalData = await response.json();
-      console.log(originalData);
-
       setReply(originalData.reply);
+      console.log(originalData);
     } catch (e) {
       console.log(e);
     }

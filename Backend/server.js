@@ -1,5 +1,5 @@
 import express from "express";
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import "dotenv/config";
 import chatRoutes from "./routes/chat.js";
 import cors from "cors";
@@ -16,23 +16,23 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://sigmagpt-1-vvef.onrender.com", // frontend URL
-    methods: ["GET", "POST", "DELETE"],
-    credentials: true,
+    // origin: "https://sigmagpt-1-vvef.onrender.com", // frontend URL
+    // methods: ["GET", "POST", "DELETE"],
+    // credentials: true,
   }),
 );
 
-const store = MongoStore.create({
-  mongoUrl: process.env.MONGO_ATLAS_URL,
-  crypto: {
-    secret: process.env.SECRET_KEY,
-  },
-  touchAfter: 24 * 3600,
-});
+// const store = MongoStore.create({
+//   // mongoUrl: process.env.MONGO_ATLAS_URL,
+//   crypto: {
+//     secret: process.env.SECRET_KEY,
+//   },
+//   touchAfter: 24 * 3600,
+// });
 
 app.use(
   session({
-    store: store,
+    // store: store,
     secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
@@ -55,7 +55,8 @@ app.use("/user", user);
 
 let main = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_ATLAS_URL);
+    // await mongoose.connect(process.env.MONGO_ATLAS_URL);
+    await mongoose.connect("mongodb://127.0.0.1:27017/sigmagpt");
     console.log("connected to database!");
   } catch (err) {
     console.log(err);

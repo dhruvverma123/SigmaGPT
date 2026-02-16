@@ -23,7 +23,7 @@ app.use(
 );
 
 const store = MongoStore.create({
-  // mongoUrl: process.env.MONGO_ATLAS_URL,
+  mongoUrl: process.env.MONGO_ATLAS_URL,
   crypto: {
     secret: process.env.SECRET_KEY,
   },

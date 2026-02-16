@@ -19,7 +19,7 @@ app.use(
     origin: "https://sigmagpt-1-vvef.onrender.com", // frontend URL
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
-  })
+  }),
 );
 
 const store = MongoStore.create({
@@ -40,7 +40,7 @@ app.use(
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24,
     },
-  })
+  }),
 );
 
 app.use(passport.initialize()); //for passport

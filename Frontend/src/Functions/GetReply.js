@@ -43,7 +43,7 @@ export function useGetReply() {
     try {
       let response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/chat`,
-        options
+        options,
       );
       let originalData = await response.json();
       setReply(originalData.reply);
